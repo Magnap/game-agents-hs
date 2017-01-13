@@ -1,0 +1,32 @@
+name:                game-agents-hs
+version:             0.1.0.0
+synopsis:            Initial project template from stack
+description:         Please see README.md
+homepage:            https://github.com/magnap/game-agents-hs#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Marcus Medom Ryding
+maintainer:          mrok4a@gmail.com
+copyright:           2016 Marcus Medom Ryding
+category:            Web
+build-type:          Simple
+extra-source-files:  README.md
+cabal-version:       >=1.10
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Lib
+  build-depends:       base >= 4.7 && < 5
+  default-language:    Haskell2010
+
+executable game-agents-hs-exe
+  hs-source-dirs:      app
+  main-is:             Main.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , game-agents-hs
+  default-language:    Haskell2010
+
+source-repository head
+  type:     git
+  location: https://github.com/magnap/game-agents-hs
